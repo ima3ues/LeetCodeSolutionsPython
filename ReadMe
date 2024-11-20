@@ -1,3 +1,16 @@
 Time Complexity: Measures how the time to run an algorithm
 Space Complexity: Measures how the memory usage of an algorithm
 
+For any for loop:
+When calculating the per iteration time complexity, we consider the operations inside the loop body.
+
+For any while loop:
+When calculating the per iteration time complexity, we consider all operations that occur within each while loop iteration, including the condition evaluation.
+The condition evaluation happens every time before the loop body executes, so it contributes to the per iteration time.
+
+O(1)
+- defining a function
+- initializing a variable
+- adding two value
+
+
