@@ -45,5 +45,3 @@ class Solution(object):
             check_num = sumOfEachDigit # O(1), assigning any variables takes the same amount of time
        
         return sumOfEachDigit
-    
-
