@@ -14,16 +14,15 @@ class Solution(object):
 # Solution
 class Solution(object):
     def maximumWealth(self, accounts):
+        prev_money = 0
         for account in accounts:
             ttl_money = 0
             for money in account:
                 ttl_money += money
-            prev_money = 0
             if ttl_money >= prev_money:
                 wealth = ttl_money
                 prev_money = ttl_money
             else:
                 wealth = prev_money
-
-        return wealth  
-        
+                prev_money = prev_money
+        return wealth 
