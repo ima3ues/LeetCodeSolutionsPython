@@ -28,4 +28,5 @@ class Solution(object):
         self.invertTree(root.left)
         self.invertTree(root.right)
 
+        # why? - the problem explicitly asks to return the **root**
         return root
