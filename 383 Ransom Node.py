@@ -15,4 +15,13 @@ class Solution(object):
 # Solution
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
-        
+        magazine_list = list(magazine)
+
+        for each_char in ransomNote:
+            if each_char in magazine_list:
+                # remove the character from magazine (avoid repeat usage)
+                magazine_list.remove(each_char)
+            else:
+                return False
+        # if all characters are found, return True
+        return True
