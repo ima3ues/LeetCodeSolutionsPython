@@ -14,6 +14,7 @@ class Solution(object):
 class Solution(object):
     def runningSum(self, nums):
         sum_array = [0] * len(nums)
+        # initialize and array which has the same size with the input array
         sum_array_index = 0
         sum_array_ttl_num_per_index = 0
         for each_num in nums:
