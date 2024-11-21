@@ -15,3 +15,18 @@ class Solution(object):
         """
  
 # Solution
+class Solution(object):
+    def fizzBuzz(self, n):
+        string_array = [None] * (n)
+        index = 0
+        for i in range(n):
+            index += 1
+            if (index % 3 == 0 and index % 5 == 0):
+                string_array[i] = "FizzBuzz"
+            elif index % 3 == 0:
+                string_array[i] = "Fizz"
+            elif index % 5 == 0:
+                string_array[i] = "Buzz"
+            else: 
+                string_array[i] = str(index)
+        return string_array
