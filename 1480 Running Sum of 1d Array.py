@@ -13,6 +13,11 @@ class Solution(object):
 # Solution
 class Solution(object):
     def runningSum(self, nums):
-        array_length = len(nums)
-        for range in array_length:
-            
+        sum_array = [0] * len(nums)
+        sum_array_index = 0
+        sum_array_ttl_num_per_index = 0
+        for each_num in nums:
+            sum_array_ttl_num_per_index += each_num
+            sum_array[sum_array_index] = sum_array_ttl_num_per_index
+            sum_array_index += 1
+        return sum_array
