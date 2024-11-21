@@ -19,14 +19,19 @@ class Solution(object):
 # Solution
 class Solution(object):
     def middleNode(self, head):
-        list_length = 1
-        second_list = []
-        while head.next:
-            list_length += 1
-            second_list.append(head.val)
-            head = head.next
-        new_start_index = (list_length // 2) + 1
-        mid_list = second_list[new_start_index:]
-        return mid_list
+        # traverse the linked list to collect all **nodes**
+        nodes = []  # store nodes, not values
+        current = head
+        
+        while current:
+            nodes.append(current) 
+            current = current.next
+        
+        # calculate the middle index
+        middle_index = len(nodes) // 2  
+        
+        # return the middle **node**
+        # why? - the problem explicitly asks to return the middle node of the linked list
+        return nodes[middle_index]
 
 
