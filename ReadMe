@@ -19,3 +19,17 @@ O(1)
 - defining a function
 - initializing a variable
 - adding two value
+
+------------
+
+Array (data structure)
+Arrays are a simple **data structure** for storing lots of **similar** items. 
+When we create an Array, we need to initialize the n, which is the number of value that the Array can hold. This is called the capacity which cannot be changed later.
+    simple example of why we need to initialize
+    same as it is for the physical box of DVDs. Do you really want to find a box that could hold 1000000 DVDs when you currently only have 15 DVDs 
+    If you make an Array with 1000000 spaces, the computer will reserve memory to hold 1000000 DVDs, even if you only put 15 DVDs into it. 
+
+------------
+
+** can use in loop
+for (int i = 0; i < 10; i++) 
