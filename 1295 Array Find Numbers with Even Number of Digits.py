@@ -13,3 +13,8 @@ class Solution(object):
 # Solution
 class Solution(object):
     def findNumbers(self, nums):
+        accumulator = 0
+        for each_num in nums:
+            if len(str(each_num)) % 2 == 0:
+                accumulator += 1
+        return accumulator
