@@ -13,6 +13,9 @@ class Solution(object):
 # Solution
 class Solution(object):
     def sortedSquares(self, nums):
-        nums_squared = [num ** 2 for num in nums]
-        nums_squared.sort()
-        return nums_squared
+        result = []
+        for each_num in nums:
+            squared = each_num ** 2
+            result.append(squared)
+        result.sort()
+        return result
