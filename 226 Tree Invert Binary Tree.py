@@ -19,9 +19,9 @@ class Solution(object):
 # Solution
 class Solution(object):
     def invertTree(self, root):
-        if not root: 
         # this line used to stop the recursion when it reaches the end of the tree (leaf nodes)
         # when the recursion reaches a leaf node, since these children are None, the function should stop there instead of continuing to call itself indefinitely
+        if not root: 
             return root
         
         root.left, root.right = root.right, root.left
