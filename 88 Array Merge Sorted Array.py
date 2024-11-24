@@ -18,3 +18,13 @@ class Solution(object):
 # Solution
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
+        i =  m 
+        j = 0
+        while i < len(nums1):
+            nums1[i] = nums2[j]
+            i += 1
+            j += 1
+        nums1.sort()
+        return nums1
+                
+                
