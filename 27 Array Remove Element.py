@@ -17,3 +17,6 @@ class Solution(object):
 # Solution
 class Solution(object):
     def removeElement(self, nums, val):
+        for each_num in nums:
+            if each_num == val:
+                nums.remove(each_num)
