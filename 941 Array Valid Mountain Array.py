@@ -18,3 +18,13 @@ class Solution(object):
 # Solution
 class Solution(object):
     def validMountainArray(self, arr):
+        next_i = 1 
+        while next_i < len(arr):
+            for each_num in arr:
+                if each_num == arr[next_i]:
+                    return False
+                next_i += 1
+        middle = len(arr) // 2
+        
+                
+
