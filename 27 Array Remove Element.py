@@ -32,4 +32,10 @@ class Solution(object):
 # Solution
 class Solution(object):
     def removeElement(self, nums, val):
-        
+        i = 0
+        while i < len(nums):
+            if nums[i] == val:
+                each_val = nums[i]
+                nums.remove(each_val)
+                i -= 1
+            i += 1
