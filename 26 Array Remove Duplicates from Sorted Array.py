@@ -25,4 +25,3 @@ class Solution(object):
                 i -= 1
             non_duplicates.append(each_num)
             i += 1
-        

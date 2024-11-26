@@ -32,5 +32,4 @@ class Solution(object):
             # move to the next element in the original array
             i += 1  
             # move to the next position in the modified array
-            j += 1  
-                
+            j += 1             

@@ -25,6 +25,4 @@ class Solution(object):
             i += 1
             j += 1
         nums1.sort()
-        return nums1
-                
-                
+        return nums1             
