@@ -16,16 +16,11 @@ class Solution(object):
 # Solution
 class Solution(object):
     def checkIfExist(self, arr):
-        i = 0
-        for each_num in arr:
-            j = 0
-            while i >= 0 and j < len(arr):
-                while i != j:
-                    if each_num == arr[j] * 2:
-                        return True
-                    else:
-                        return False
-                j += 1
-            i += 1
+        for i in range(len(arr)): 
+            for j in range(len(arr)): 
+                if i != j and arr[i] == 2 * arr[j]: 
+                    return True
+        # if no pair is found, return False (because the question ask for "exist")
+        return False  
                         
         
