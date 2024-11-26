@@ -21,6 +21,4 @@ class Solution(object):
                 if i != j and arr[i] == 2 * arr[j]: 
                     return True
         # if no pair is found, return False (because the question ask for "exist")
-        return False  
-                        
-        
+        return False 
