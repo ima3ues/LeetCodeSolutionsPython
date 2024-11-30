@@ -22,6 +22,6 @@ class Solution(object):
             each_num = nums[i]
             if each_num in non_duplicates:
                 nums.remove(each_num)
-                i -= 1
+                i -= 1 # look at 27 for explanation
             non_duplicates.append(each_num)
             i += 1
