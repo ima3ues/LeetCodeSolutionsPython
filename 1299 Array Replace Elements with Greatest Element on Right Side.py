@@ -17,17 +17,11 @@ class Solution(object):
         return_list = []
         i = 0
         for i in range(len(arr) - 1):
-            append_val = -1
-            for j in range(i + 1, len(arr) -1 ):
-                if arr[j] == None:
-                    append_val = -1
-                else:
-                    if arr[j] > arr[j + 1] and arr[j] > append_val:
-                        append_val = arr[j]
-                    elif arr[j] < arr[j + 1] and arr[j + 1] > append_val:
-                        append_val = arr[j + 1]
-                    else:
-                        append_val = append_val
+            append_val = None
+            for j in range(i + 1, len(arr)):
+                if arr[j] > append_val:
+                    append_val = arr[j]
             return_list.append(append_val)
+        return_list.append(-1)
         return return_list
                 
