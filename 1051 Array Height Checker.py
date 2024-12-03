@@ -15,4 +15,11 @@ class Solution(object):
 # Solution
 class Solution(object):
     def heightChecker(self, heights):
-        
+        sorted_arr = sorted(heights)
+        accumulator = 0
+        i = 0
+        for each_height in heights:
+            if each_height != sorted_arr[i]:
+                accumulator += 1
+            i += 1
+        return accumulator
