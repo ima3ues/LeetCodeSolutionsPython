@@ -18,9 +18,8 @@ class Solution(object):
         copy = arr[:]
         
         #use two pointers to copy elements with zero duplication
-        i = 0  # pointer for the copy array
-        j = 0  # Pointer for the modified array
-        
+        i = 0  
+        j = 0  
         # iterate until we fill the modified array
         while i < len(arr):
             arr[i] = copy[j] 
@@ -33,3 +32,10 @@ class Solution(object):
             i += 1  
             # move to the next position in the modified array
             j += 1             
+            
+# no need to worry about the below part will not duplicate the current index to 0:
+# if copy[j] == 0 and i + 1 < len(arr):
+#     # move to the next position
+#     i += 1
+#     arr[i] = 0
+# as arr[i] = copy[j] this line already duplicate the current index to 0
