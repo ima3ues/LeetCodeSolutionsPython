@@ -18,11 +18,17 @@ class Solution(object):
             if each_num not in duplicate_nums:
                 duplicate_nums.append(each_num)
         duplicate_nums.sort()
+        
+        while len(duplicate_nums) != len(nums):
+            duplicate_nums.append(None)
+
         i = 0
         counter = 1
         return_list = []
-        for i in range(len(nums) - 1):
+        while i < len(nums):
             if duplicate_nums[i] != counter:
                 return_list.append(i)
                 counter += 1
+            i += 1
+            
         return return_list
