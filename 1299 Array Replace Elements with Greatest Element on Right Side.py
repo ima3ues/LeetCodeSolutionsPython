@@ -18,6 +18,7 @@ class Solution(object):
         i = 0
         for i in range(len(arr) - 1):
             append_val = None
+            # if range(i + 1, len(arr) - 1) it will generates numbers from i + 1 to len(arr) - 2
             for j in range(i + 1, len(arr)):
                 if arr[j] > append_val:
                     append_val = arr[j]
