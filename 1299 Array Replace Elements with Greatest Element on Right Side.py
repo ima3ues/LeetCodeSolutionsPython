@@ -19,10 +19,10 @@ class Solution(object):
         for i in range(len(arr) - 1):
             append_val = None
             # if range(i + 1, len(arr) - 1) it will generates numbers from i + 1 to len(arr) - 2
+            # because range(start, stop, step) and len(arr) - 1 is the stopping index
             for j in range(i + 1, len(arr)):
                 if arr[j] > append_val:
                     append_val = arr[j]
             return_list.append(append_val)
         return_list.append(-1)
         return return_list
-                
