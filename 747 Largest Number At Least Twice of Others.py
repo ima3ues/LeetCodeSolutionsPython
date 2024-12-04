@@ -16,8 +16,8 @@ class Solution(object):
     def dominantIndex(self, nums):
         maximum = max(nums)
         i = 0
-        while i < len(nums) and nums[i] != maximum:
-            if nums[i] * 2 > maximum:
+        while i < len(nums):
+            if nums[i] != maximum and nums[i] * 2 > maximum:
                 return -1
             i += 1
         return nums.index(maximum)
