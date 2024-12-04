@@ -39,5 +39,5 @@ for more details please refer to question 27
 **For Me To Revise Again**
 941 Valid Mountain Array
 1089 Duplicate Zeros Array
-1299
+1299 (need to take more time to think on it)
 1346 Check If N and Its Double Exist
