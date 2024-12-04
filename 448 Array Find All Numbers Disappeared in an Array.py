@@ -10,7 +10,7 @@ class Solution(object):
         :rtype: List[int]
         """
 
-# Solution
+# Solution (which is correct but exceed the time limit)
 class Solution(object):
     def findDisappearedNumbers(self, nums):
         check_list = []
@@ -23,3 +23,20 @@ class Solution(object):
                 return_list.append(each_num)
 
         return return_list
+    
+# Solution 
+class Solution(object):
+    def findDisappearedNumbers(self, nums):
+        n = len(nums)
+        count = [0] * n  
+        
+        # as each number are in ascending from 1 to n, therefore we can use accumulator at each number's index
+        for num in nums:
+            count[num - 1] += 1  
+        
+        missing = []
+        for i in range(n):
+            if count[i] == 0:
+                missing.append(i + 1)
+        
+        return missing
