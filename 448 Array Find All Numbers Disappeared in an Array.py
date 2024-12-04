@@ -13,22 +13,13 @@ class Solution(object):
 # Solution
 class Solution(object):
     def findDisappearedNumbers(self, nums):
-        duplicate_nums = []
-        for each_num in nums:
-            if each_num not in duplicate_nums:
-                duplicate_nums.append(each_num)
-        duplicate_nums.sort()
-        
-        while len(duplicate_nums) != len(nums):
-            duplicate_nums.append(None)
+        check_list = []
+        for i in range(1, len(nums) + 1):
+            check_list.append(i)
 
-        i = 0
-        counter = 1
         return_list = []
-        while i < len(nums):
-            if duplicate_nums[i] != counter:
-                return_list.append(i)
-                counter += 1
-            i += 1
-            
+        for each_num in check_list:
+            if each_num not in nums:
+                return_list.append(each_num)
+
         return return_list
