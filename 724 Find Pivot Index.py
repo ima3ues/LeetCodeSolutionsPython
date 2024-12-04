@@ -32,3 +32,10 @@ class Solution(object):
             else:
                 pivot_index += 1
         return -1
+    
+class Solution(object):
+    def pivotIndex(self, nums):
+        for pivot_index in range(len(nums)):
+            if sum(nums[:pivot_index]) == sum(nums[(pivot_index + 1):]):
+                return pivot_index
+        return -1
