@@ -37,6 +37,7 @@ for more details please refer to question 27
 ------------
 
 **For Me To Revise Again**
+498 Diagonal Traverse
 941 Valid Mountain Array
 1089 Duplicate Zeros Array
 1299 (need to take more time to think on it)
