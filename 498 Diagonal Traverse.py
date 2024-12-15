@@ -13,7 +13,9 @@ class Solution(object):
 # Solution
 class Solution(object):
     def findDiagonalOrder(self, mat):
-        rows, cols = len(mat), len(mat[0])
+        # all start from up-right first
+        rows = len(mat)
+        cols = len(mat[0])
         i = 0
         j = 0
         return_list = []
