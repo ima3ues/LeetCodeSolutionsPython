@@ -13,3 +13,8 @@ class Solution(object):
 # Solution
 class Solution(object):
     def spiralOrder(self, matrix):
+        row = len(matrix)
+        column = len(matrix[0])
+        i = 0
+        j = 0
+        
