@@ -13,5 +13,17 @@ class Solution(object):
 # Solution
 class Solution(object):
     def generate(self, numRows):
-        
-        
+        if 1 <= numRows <= 30:
+            current_row = 0
+            return_list = []
+            while current_row < numRows:
+                list_in_list = []
+                start_num = 1
+                i = 0
+                while i < current_row:
+                    list_in_list.append(start_num)
+                    i += 1
+                return_list.append(list_in_list)
+                current_row += 1
+
+        return return_list
