@@ -14,16 +14,18 @@ class Solution(object):
 class Solution(object):
     def generate(self, numRows):
         if 1 <= numRows <= 30:
-            current_row = 0
-            return_list = []
-            while current_row < numRows:
+            return_list = [[1]]
+            prev_list = 0
+            while len(return_list) != numRows:
                 list_in_list = []
-                start_num = 1
                 i = 0
-                while i < current_row:
-                    list_in_list.append(start_num)
+                while i < range(len(prev_list)):
+                    if i == 0:
+                        list_in_list.append(prev_list[i])
+                    else:
+                        list_in_list.append(prev_list[i - 1] + prev_list[i])
                     i += 1
+                list_in_list.append(prev_list[0])
                 return_list.append(list_in_list)
-                current_row += 1
-
+                prev_list += 1
         return return_list
