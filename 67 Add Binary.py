@@ -31,7 +31,7 @@ class Solution(object):
                     leak = None
 
                 elif index_b < 0:
-                    now = a[index_a] 
+                    now = a[index_a]
                     leak = None
 
                 else:
@@ -46,9 +46,10 @@ class Solution(object):
                         now = 1
                         leak = 1
                 
-            elif leak != None:
+            else:
                 if index_a < 0 and index_b < 0:
                     now = leak
+                    leak = None
 
                 elif index_a < 0: 
                     num = int(b[index_b]) + leak
@@ -64,7 +65,6 @@ class Solution(object):
 
                 elif index_b < 0:
                     num = int(a[index_a]) + leak 
-                    leak = None
                     if num == 0 or num == 1:
                         now = num
                         leak = None
@@ -92,5 +92,8 @@ class Solution(object):
             index_b -= 1
         
         return_list.reverse()
-        last = "".join(return_list)
-        return(return_list)
+        last = "".join(str(return_list))
+        return(last)
+    
+
+print(Solution().addBinary("11", "1"))  # Expected: "100"
