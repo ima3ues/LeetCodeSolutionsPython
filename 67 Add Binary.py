@@ -18,6 +18,7 @@ class Solution(object):
         index_a = len(a) - 1
         index_b = len(b) - 1
         return_list = []
+        now = None
 
         while leak != "done":
             
@@ -34,7 +35,7 @@ class Solution(object):
                     leak = None
 
                 else:
-                    num = a[index_a] + b[index_b]
+                    num = int(a[index_a]) + int(b[index_b])
                     if num == 0 or num == 1:
                         now = num
                         leak = None
@@ -45,12 +46,12 @@ class Solution(object):
                         now = 1
                         leak = 1
                 
-            else:
+            elif leak != None:
                 if index_a < 0 and index_b < 0:
                     now = leak
 
                 elif index_a < 0: 
-                    num = b[index_b] + leak
+                    num = int(b[index_b]) + leak
                     if num == 0 or num == 1:
                         now = num
                         leak = None
@@ -62,7 +63,7 @@ class Solution(object):
                         leak = 1
 
                 elif index_b < 0:
-                    num = a[index_a] + leak 
+                    num = int(a[index_a]) + leak 
                     leak = None
                     if num == 0 or num == 1:
                         now = num
@@ -75,7 +76,7 @@ class Solution(object):
                         leak = 1
 
                 else:
-                    num = a[index_a] + b[index_b] + leak
+                    num = int(a[index_a]) + int(b[index_b]) + leak
                     if num == 0 or num == 1:
                         now = num
                         leak = None
@@ -92,4 +93,4 @@ class Solution(object):
         
         return_list.reverse()
         last = "".join(return_list)
-        return(last)
+        return(return_list)
