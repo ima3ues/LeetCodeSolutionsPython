@@ -20,11 +20,12 @@ class Solution(object):
         return_list = []
         now = None
 
-        while leak != "done":
+        while now != "done":
             
             if leak == None:
                 if index_a < 0 and index_b < 0:
-                    leak = "done"
+                    now = "done"
+                    break
 
                 elif index_a < 0: 
                     now = b[index_b]
@@ -87,13 +88,10 @@ class Solution(object):
                         now = 1
                         leak = 1
 
-            return_list.append(now)
+            return_list.append(str(now))
             index_a -= 1
             index_b -= 1
         
         return_list.reverse()
-        last = "".join(str(return_list))
+        last = "".join((return_list))
         return(last)
-    
-
-print(Solution().addBinary("11", "1"))  # Expected: "100"
