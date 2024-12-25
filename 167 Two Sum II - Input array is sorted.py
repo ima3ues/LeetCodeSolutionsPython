@@ -14,7 +14,7 @@ class Solution(object):
         :rtype: List[int]
         """
 
-# Solution
+# Solution (which is correct but exceed the time limit)
 class Solution(object):
     def twoSum(self, numbers, target):
         i = 0
@@ -26,3 +26,7 @@ class Solution(object):
                 else:
                     j += 1                
             i += 1
+
+# Solution 
+class Solution(object):
+    def twoSum(self, numbers, target):
