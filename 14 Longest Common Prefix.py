@@ -17,12 +17,17 @@ class Solution(object):
     def longestCommonPrefix(self, strs):
         i = 0
         while i < len(strs):
-            j = 0
-            while j < len(accumulator):
-                if accumulator[j] == strs[i][j]:
-                    j += 1
-                    accumulator_curr = accumulator_curr + strs[i-1][j]
-                else:
-                    break
+            accumulator_curr = ""
+            if i == 0:
+                accumulator_curr = strs[i]
+            else:
+                j = 0
+                while j < len(accumulator):
+                    if accumulator[j] == strs[i][j]:
+                        accumulator_curr += strs[i][j]
+                        j += 1
+                    else:
+                        break
             accumulator = accumulator_curr
             i += 1
+        return accumulator
