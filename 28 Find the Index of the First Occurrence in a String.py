@@ -24,6 +24,7 @@ class Solution(object):
                     j += 1
                 else:
                     return_val = -1
+                    i = i - j
                     j = 0
                 i += 1
             else: 
