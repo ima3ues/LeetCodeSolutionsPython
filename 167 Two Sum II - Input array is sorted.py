@@ -17,4 +17,9 @@ class Solution(object):
 # Solution
 class Solution(object):
     def twoSum(self, numbers, target):
-        
+        for each_num in numbers:
+            for sec_each_num in numbers:
+                if target == each_num + sec_each_num:
+                    return("yes")
+                else:
+                    pass
