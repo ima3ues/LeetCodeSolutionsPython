@@ -22,7 +22,7 @@ class Solution(object):
                 accumulator_curr = strs[i]
             else:
                 j = 0
-                compare = min(len(accumulator), len(strs[i][j]))
+                compare = min(len(accumulator), len(strs[i]))
                 while j < compare:
                     if accumulator[j] == strs[i][j]:
                         accumulator_curr += strs[i][j]
