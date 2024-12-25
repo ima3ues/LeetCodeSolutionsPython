@@ -29,7 +29,7 @@ class Solution(object):
                 i += 1
             else: 
                 break
-        if return_val == -1:
-            return return_val
-        else:
+        if j == len(needle):
             return return_val - (len(needle) - 1)
+        else:
+            return -1
