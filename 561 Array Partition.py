@@ -26,9 +26,9 @@ class Solution(object):
         final_list = []
         i = 0
         while i < len(nums):
-            final_list.append((i, i + 1))
+            final_list.append((nums[i], nums[i + 1]))
             i += 2
         accumulator = 0
         for each_pair in final_list:
             accumulator += min(each_pair)
-        return accumulator     
+        return accumulator
