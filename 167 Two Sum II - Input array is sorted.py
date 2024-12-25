@@ -17,9 +17,12 @@ class Solution(object):
 # Solution
 class Solution(object):
     def twoSum(self, numbers, target):
-        for each_num in numbers:
-            for sec_each_num in numbers:
-                if target == each_num + sec_each_num:
-                    return("yes")
+        i = 0
+        while i < len(numbers):
+            j = 0 
+            while j < len(numbers):
+                if target == numbers[i] + numbers[j]:
+                    return [i + 1, j + 1]
                 else:
-                    pass
+                    j += 1                
+            i += 1
