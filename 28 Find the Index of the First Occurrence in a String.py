@@ -20,14 +20,14 @@ class Solution(object):
         while i < len(haystack):
             if j < len(needle):
                 if haystack[i] == needle[j]:
-                    j += 1
                     return_val = i
+                    j += 1
                 else:
-                    j = 0
                     return_val = -1
+                    j = 0
+                i += 1
             else: 
                 break
-            i += 1
         if return_val == -1:
             return return_val
         else:
