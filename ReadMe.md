@@ -42,3 +42,6 @@ for more details please refer to question 27
 1089 Duplicate Zeros Array
 1299 (need to take more time to think on it)
 1346 Check If N and Its Double Exist
+
+**Very Confuse Question** will have chinese explanation
+561
