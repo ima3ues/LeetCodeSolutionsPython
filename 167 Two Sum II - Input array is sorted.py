@@ -21,7 +21,7 @@ class Solution(object):
         while i < len(numbers):
             j = 0 
             while j < len(numbers):
-                if target == numbers[i] + numbers[j]:
+                if i != j and target == numbers[i] + numbers[j]:
                     return [i + 1, j + 1]
                 else:
                     j += 1                
