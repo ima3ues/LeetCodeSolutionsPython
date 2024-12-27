@@ -25,8 +25,8 @@ class Solution(object):
             j = i + 1
             while j < len(nums):
                 ans += nums[j]
+                accumulator += 1
                 if ans >= target:
-                    accumulator += 1
                     alist.append(accumulator + 1)
                 j += 1
             i += 1
