@@ -37,6 +37,7 @@ for more details please refer to question 27
 ------------
 
 **For Me To Revise Again**
+167 (exceed the time limit)
 498 Diagonal Traverse
 941 Valid Mountain Array
 1089 Duplicate Zeros Array
