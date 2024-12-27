@@ -14,12 +14,24 @@ class Solution(object):
 # Solution
 class Solution(object):
     def minSubArrayLen(self, target, nums):
-        left, right = 0, len(nums) - 1 
-        while left < right:
-            current_sum = nums[left] + nums[right]
-            if current_sum >= target:
-                return current_sum
-            elif current_sum < target:
-                left += 1
-            else:
-                return 0
+        for each_num in nums:
+            if each_num >= target:
+                return 1
+        all_possible = []
+        i = 0
+        while i < len(nums):
+            j = 0
+            while j < len(nums):
+                current_sum = nums[i] + nums[j]
+                if current_sum >= target:
+                    all_possible.append((i, j))
+                j += 1
+            i += 1
+        update = []
+        for (i, j) in all_possible:
+            if j > i:
+                update.append(j - i + 1)
+        if update == []:
+            return 0
+        else:
+            return(min(update))
