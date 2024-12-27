@@ -30,3 +30,18 @@ class Solution(object):
 # Solution 
 class Solution(object):
     def twoSum(self, numbers, target):
+        # two-pointer initialization
+        left, right = 0, len(numbers) - 1  
+        
+        while left < right:
+            current_sum = numbers[left] + numbers[right]
+            
+            if current_sum == target:
+                # return 1-based indices
+                return [left + 1, right + 1]  
+            elif current_sum < target:
+                # move the left pointer to increase the sum
+                left += 1  
+            else:
+                # move the right pointer to decrease the sum
+                right -= 1  
