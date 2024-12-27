@@ -17,21 +17,20 @@ class Solution(object):
         for each_num in nums:
             if each_num >= target:
                 return 1
-        all_possible = []
         i = 0
+        alist = []
         while i < len(nums):
-            j = 0
+            ans = nums[i]
+            accumulator = 0
+            j = i + 1
             while j < len(nums):
-                current_sum = nums[i] + nums[j]
-                if current_sum >= target:
-                    all_possible.append((i, j))
+                ans += nums[j]
+                if ans >= target:
+                    accumulator += 1
+                    alist.append(accumulator + 1)
                 j += 1
             i += 1
-        update = []
-        for (i, j) in all_possible:
-            if j > i:
-                update.append(j - i + 1)
-        if update == []:
+        if alist == []:
             return 0
         else:
-            return(min(update))
+            return(min(alist))
