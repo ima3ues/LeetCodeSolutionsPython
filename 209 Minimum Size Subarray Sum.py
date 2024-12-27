@@ -11,7 +11,7 @@ class Solution(object):
         :rtype: int
         """
         
-# Solution
+# Solution (which is correct but exceed the time limit)
 class Solution(object):
     def minSubArrayLen(self, target, nums):
         for each_num in nums:
@@ -34,3 +34,29 @@ class Solution(object):
             return 0
         else:
             return(min(alist))
+        
+# Solution 
+class Solution(object):
+    def minSubArrayLen(self, target, nums):
+        total = sum(nums)
+        if total < target:
+            return 0
+        elif total == target:
+            return len(nums)
+        
+        for each_num in nums:
+            if each_num >= target:
+                return 1
+            
+        left = 0
+        curr = 0
+        slide_length = len(nums)
+        for right in range(len(nums)):
+            curr += nums[right]
+
+            while curr >= target:
+                slide_length = min(slide_length, right + 1 - left)
+                curr -= nums[left]
+                left +=1
+        
+        return slide_length
